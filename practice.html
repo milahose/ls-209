@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <title>Todos</title>
+    <meta charset="UTF-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
+    <script src="assets/javascript/todos.js"></script>
+    <link rel="stylesheet" href="assets/stylesheets/todos.css" />
+  </head>
+  <body>
+    <input id="menu_toggle" type="checkbox">
+    <nav>
+      <h2 class="all_todos active" data-title="All Todos All Todos">All Todos<span class="count"></span></h2>
+      <ul class="all">
+      </ul>
+      <h2 class="completed" data-title="Completed Completed">Completed<span class="count">8</span></h2>
+      <ul class="completed">
+      </ul>
+    </nav>
+    <main>
+      <header>
+        <label for="menu_toggle">
+          <img src="assets/images/icon_menu.png" alt="menu"/>
+        </label>
+        <h1><span class="title"></span><span class="count"></span></h1>
+      </header>
+      <h3 class="add_new">Add new to do</h3>
+      <!--<input type="checkbox" id="modal_toggle" name="modal_check" />-->
+      <ul>
+        <li>
+        </li>
+      </ul>
+      <div class="modal">
+          <form action="#" method="post">
+            <fieldset>
+              <dl>
+                <div>
+                  <dt><label for="title">Title</label></dt>
+                  <dd><input type="text" name="title" id="title" required/></dd>
+                </div>
+                <div>
+                  <dt><label for="day">Due Date</label></dt>
+                  <dd>
+                    <select name="day" id="day">
+                      <option value="" disabled="disabled" selected="selected">Day</option>
+                      <option>1</option>       
+                      <option>2</option>       
+                      <option>3</option>       
+                      <option>4</option>       
+                      <option>5</option>       
+                      <option>6</option>       
+                      <option>7</option>       
+                      <option>8</option>       
+                      <option>9</option>       
+                      <option>10</option>       
+                      <option>11</option>       
+                      <option>12</option>       
+                      <option>13</option>       
+                      <option>14</option>       
+                      <option>15</option>       
+                      <option>16</option>       
+                      <option>17</option>       
+                      <option>18</option>       
+                      <option>19</option>       
+                      <option>20</option>       
+                      <option>21</option>       
+                      <option>22</option>       
+                      <option>23</option>       
+                      <option>24</option>       
+                      <option>25</option>       
+                      <option>26</option>       
+                      <option>27</option>       
+                      <option>28</option>       
+                      <option>29</option>       
+                      <option>30</option>       
+                      <option>31</option>      
+                    </select>
+                    <span class="slash"> / </span>
+                  </dd>
+                  <dd>
+                    <select name="month" id="month">
+                      <option value="" disabled="disabled" selected="selected">Month</option>
+                      <option>January</option>       
+                      <option>February</option>       
+                      <option>March</option>       
+                      <option>April</option>       
+                      <option>May</option>       
+                      <option>June</option>       
+                      <option>July</option>       
+                      <option>August</option>       
+                      <option>September</option>       
+                      <option>October</option>       
+                      <option>November</option>       
+                      <option>December</option>           
+                    </select>
+                    <span class="slash"> / </span>
+                  </dd>
+                  <dd>
+                    <select name="year" id="year">
+                      <option value="" disabled="disabled" selected="selected">Year</option>
+                      <option>2014</option>       
+                      <option>2015</option>       
+                      <option>2016</option>       
+                      <option>2017</option>       
+                      <option>2018</option>       
+                      <option>2019</option>       
+                      <option>2020</option>
+                    </select>
+                  </dd>
+                </div>
+                <div>
+                  <dt><label for="description">Description</label></dt>
+                  <dd><textarea name="description" id="description" placeholder="Description"></textarea></dd>
+                </div>
+              </dl>
+              <button type="submit" id="submit">Save</button>
+              <button type="button" id="mark_complete">Mark as Complete</button>
+            </fieldset>
+          </form>
+        </div>
+    </main>
+    <script id='all_todos_lists' type='text/x-handlebars'>
+      {{#each lists}}
+        <li class="" data-title="{{category}} {{title}}">{{title}} <span class="count">{{numTodos}}</span></li>
+      {{/each}}
+    </script>
+    <script id='todos' type='text/x-handlebars'>
+      {{#each todos}}
+        <li data-id={{id}}>
+          <label class="modal_label {{completed}}" for="modal_toggle"><span class="todo_info">{{title}} - {{formattedDueDate}}</span></label>
+          <a class="delete" href="#"><img src="assets/images/icon_trash.png" alt="trash"/></a>
+        </li>
+      {{/each}}
+    </script>
+  </body>
+</html> 

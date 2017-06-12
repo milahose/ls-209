@@ -1,7 +1,165 @@
 @import url('whitespace-reset.css');
 
+body {
+	color: #fff;
+	line-height: 24px;
+	text-align: left;
+	font: lighter 18px Helvetica, Arial, sans-serif;
+}
+
 /*
 ==========================
-			Header Styles
+			  Nav Styles
 ==========================
 */
+
+nav {
+	position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 315px;
+	background-color: #464f77;
+	box-sizing: border-box;
+}
+
+nav section {
+	padding-top: 45px;
+}
+
+nav img {
+	left: 100px;
+	bottom: -26px;
+}
+
+nav img, 
+nav li {
+	position: relative;
+}
+
+h2 {
+	font-weight: lighter;
+	letter-spacing: 1px;
+}
+
+nav h2 {
+	padding: 0 0 30px 135px;
+}
+
+nav ul {
+	width: 315px;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+nav a {
+	color: #fff;
+	display: block;
+	font-size: 14px;
+	line-height: 40px;
+	text-decoration: none;
+}
+
+nav li.selected {
+	background-color: #373a60;
+}
+
+nav li.selected span {
+	background-color: #008dd9;
+}
+
+nav li:hover {
+	background-color: #373a60;
+}
+
+nav li:hover span {
+	background-color: #008dd9;
+	cursor: pointer;
+}
+
+nav section + section li {
+	text-decoration: line-through;
+}
+
+nav section + section a {
+	color: #b3b3b3;
+}
+
+/*span.todos-total {
+	display: block;
+	position: absolute;
+	right: 30px; 
+	top: 11px;
+	padding: 1.5px 1px 1px 1px;
+	width: 15px;
+	height: 15px;
+	font-size: 12px;
+	border-radius: 50%;
+	background-color: #6c7094;
+}
+
+h2 span.todos-total {
+	top: 77px;
+	padding: 1.5px 3.5px 0 2.5px;
+	border-radius: 8px;
+}*/
+
+/*
+==========================
+			 Main Styles
+==========================
+*/
+
+main {
+	margin-left: 345px;
+}
+
+main h2 {
+	margin-top: 75px;
+	color: #050505;
+	font-size: 21px;
+}
+
+main > h2 span.todos-total {
+	color: #fff;
+	position: relative;
+	/*padding: 1.5px 1px 1px 1px;*/
+}
+
+dl, dt, dd {
+	display: inline
+}
+
+dd {
+	position: absolute;
+	right: 0;
+}
+
+/*dd {
+	position: absolute;
+	right: 30px; 
+	top: 11px;
+	padding: 1.5px 1px 1px 1px;
+	width: 15px;
+	height: 15px;
+	font-size: 12px;
+	border-radius: 50%;
+	background-color: #6c7094;
+}*/
+
+
+
+
+
+
+/*
+==========================
+			Media Queries
+==========================
+*/
+
+@media screen and (max-width: 768px) {
+
+}
+

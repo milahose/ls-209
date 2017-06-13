@@ -5,76 +5,151 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link href="assets/img/todo.png" rel="icon" />
-		<link href="newstyles.css" rel="stylesheet" />
+		<link href="styles.css" rel="stylesheet" />
 	</head>
 	<body>
-		<nav>
-			<section>
-				<img src="assets/img/list-icon.png" alt="List icon" />
-				<h2>All Todos <span class="todos-total">18</span></h2>
-				<a href="#">
-					<dl class="selected">
-						<dt>
-							<time datetime="2016-02">2/16</time>
-						</dt>
-						<dd class="selected">8</dd>
-					</dl>
-				</a>
-				<a href="#">
-					<dl>
-						<dt>
-							<time datetime="2016-03">3/16</time>
-						</dt>
-						<dd>2</dd>
-					</dl>
-				</a>
-				<a href="#">
-					<dl>
-						<dt>
-							<time datetime="2016-04">4/16</time>
-						</dt>
-						<dd>1</dd>
-					</dl>
-				</a>
-				<a href="#">
-					<dl>
-						<dt>
-							<time datetime="2016-05">5/16</time>
-						</dt>
-						<dd>1</dd>
-					</dl>
-				</a>
-				<a href="#">
-					<dl>
-						<dt>
-							<time datetime="2016-06">6/16</time>
-						</dt>
-						<dd>6</dd>
-					</dl>
-				</a>
-			</section>
+		<div class="container">
+			<input type="checkbox" id="menu-toggle"/>
+			<label for="menu-toggle">
+					<img src="assets/img/hamburger.png" alt="Hamburger dropdown">
+			</label>  
+			<nav>
+				<section>
+					<img src="assets/img/list-icon.png" alt="List icon" />
+					<h2>All Todos <span class="todos-total">18</span></h2>
+					<a href="#">
+						<dl class="selected">
+							<dt>
+								<time datetime="2016-02">02/16</time>
+							</dt>
+							<dd class="selected">8</dd>
+						</dl>
+					</a>
+					<a href="#">
+						<dl>
+							<dt>
+								<time datetime="2016-03">03/16</time>
+							</dt>
+							<dd>2</dd>
+						</dl>
+					</a>
+					<a href="#">
+						<dl>
+							<dt>
+								<time datetime="2016-04">04/16</time>
+							</dt>
+							<dd>1</dd>
+						</dl>
+					</a>
+					<a href="#">
+						<dl>
+							<dt>
+								<time datetime="2016-05">05/16</time>
+							</dt>
+							<dd>1</dd>
+						</dl>
+					</a>
+					<a href="#">
+						<dl>
+							<dt>
+								<time datetime="2016-06">06/16</time>
+							</dt>
+							<dd>6</dd>
+						</dl>
+					</a>
+				</section>
 
-			<section>
-				<img src="assets/img/checkbox.png" alt="check mark" />
-				<h2>Completed</h2>
-				<ul>
-					<li>
-						<a href="#"><time datetime="2015-02">2/15</time></a>
-					</li>
-					<li>
-						<a href="#"><time datetime="2015-03">3/15</time></a>
-					</li>
-					<li>
-						<a href="#"><time datetime="2015-04">4/15</time></a>
-					</li>
-					<li>
-						<a href="#"><time datetime="2015-05">5/15</time></a>
-					</li>
-					<li>
-						<a href="#"><time datetime="2014-06">2/14</time></a>
-					</li>
-				</ul>
-			</section>
-		</nav>
+				<section>
+					<img src="assets/img/checkbox.png" alt="check mark" />
+					<h2>Completed</h2>
+					<ul>
+						<li>
+							<a href="#"><time datetime="2015-02">02/15</time></a>
+						</li>
+						<li>
+							<a href="#"><time datetime="2015-03">03/15</time></a>
+						</li>
+						<li>
+							<a href="#"><time datetime="2015-04">04/15</time></a>
+						</li>
+						<li>
+							<a href="#"><time datetime="2015-05">05/15</time></a>
+						</li>
+						<li>
+							<a href="#"><time datetime="2014-06">02/14</time></a>
+						</li>
+					</ul>
+				</section>
+			</nav>
+			
+			<main>
+				<header>
+					<h2>
+						<time datetime="2016-02">02/16</time> 
+						<span class="todos-total">8</span>
+					</h2>
+				</header>
+
+				<h3>
+					<label for="new-item">
+            <input type="checkbox" id="new-item" />
+            <img src="assets/img/plus-icon.png" alt="Add item" />
+            Add new to do
+          </label>
+        </h3>
+
+				<table>
+					<tbody>
+						<tr>
+							<td><img src="assets/img/empty-box.png" alt="checkbox" /></td>
+							<td>Item 1</td>
+							<td><img src="assets/img/trash-bin.png" alt="Trash" /></td>
+						</tr>
+						<tr>
+							<td><img src="assets/img/empty-box.png" alt="checkbox" /></td>
+							<td>Item 2</td>
+							<td><img src="assets/img/trash-bin.png" alt="Trash" /></td>
+						</tr>
+						<tr class="checked">
+							<td><img src="assets/img/checked-box.png" alt="checkbox" /></td>
+							<td><a>Item 3</a></td>
+							<td><img src="assets/img/trash-bin.png" alt="Trash" /></td>
+						</tr>
+						<tr class="checked">
+							<td><img src="assets/img/checked-box.png" alt="checkbox" /></td>
+							<td>Item 4</td>
+							<td><img src="assets/img/trash-bin.png" alt="Trash" /></td>
+						</tr>
+						<tr class="checked">
+							<td><img src="assets/img/checked-box.png" alt="checkbox" /></td>
+							<td>Item 5</td>
+							<td><img src="assets/img/trash-bin.png" alt="Trash" /></td>
+						</tr>
+						<tr>
+							<td><img src="assets/img/empty-box.png" alt="checkbox" /></td>
+							<td>Item 6</td>
+							<td><img src="assets/img/trash-bin.png" alt="Trash" /></td>
+						</tr>
+						<tr>
+							<td><img src="assets/img/empty-box.png" alt="checkbox" /></td>
+							<td>Item 7</td>
+							<td><img src="assets/img/trash-bin.png" alt="Trash" /></td>
+						</tr>
+						<tr>
+							<td><img src="assets/img/empty-box.png" alt="checkbox" /></td>
+							<td>Item 8</td>
+							<td><img src="assets/img/trash-bin.png" alt="Trash" /></td>
+						</tr>
+						<tr>
+							<td><img src="assets/img/empty-box.png" alt="checkbox" /></td>
+							<td>Item 9</td>
+							<td><img src="assets/img/trash-bin.png" alt="Trash" /></td>
+						</tr>
+					</tbody>
+				</table>
+
+
+			</main>
+		</div>
 	</body>
 </html>

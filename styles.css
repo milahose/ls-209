@@ -1,10 +1,29 @@
 @import url('whitespace-reset.css');
 
+/*
+==========================
+			Global Styles
+==========================
+*/
+
+html, body {
+	height: 100%;
+}
+
 body {
-	color: #fff;
 	line-height: 24px;
 	text-align: left;
 	font: lighter 16px Helvetica, Arial, sans-serif;
+}
+
+h2 {
+	font-weight: lighter;
+	letter-spacing: 1px;
+}
+
+input[id="menu-toggle"], 
+label[for="menu-toggle"] {
+	visibility: hidden;
 }
 
 /*
@@ -19,12 +38,25 @@ nav {
   left: 0;
   bottom: 0;
   width: 315px;
+  /*float: left;
+  height: 100%;
+  position: relative;*/
 	background-color: #464f77;
 	box-sizing: border-box;
 }
 
-nav section {
-	padding-top: 75px;
+/*nav:after {
+	content: "";
+  display: table;
+  clear: both;
+}*/
+
+nav section:first-of-type {
+	padding-top: 65px;
+}
+
+nav section:last-of-type {
+	padding-top: 45px;
 }
 
 nav img {
@@ -33,14 +65,13 @@ nav img {
 }
 
 nav section > h2 {
-	font-weight: lighter;
-	letter-spacing: 1px;
+	color: #fff;
 	margin-top: 6px;
-	padding: 0 0 30px 140px;
+	padding: 0 0 15px 140px;
 }
 
 nav section > a, 
-nav section ul li > a{
+nav section ul li > a {
 	color: #a5a7bd;
 	display: block;
 	text-decoration: none;
@@ -48,8 +79,7 @@ nav section ul li > a{
 
 dl, 
 nav ul li a  {
-	font-size: 14px;
-	padding: 12px 0;
+	padding: 10px 0;
 	text-align: center;
 }
 
@@ -99,5 +129,163 @@ dl.selected {
 
 dl:hover > dd, 
 dl.selected > dd {
-	background-color: #148fd5
+	background-color: #148fd5;
+}
+
+/*
+==========================
+		 	 Main Styles
+==========================
+*/
+
+main {
+	background-color: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0; 
+  left: 315px;
+  /*margin: 70px 0 0 35px;*/
+  padding: 0 50px;
+  margin: 70px auto;
+
+  -moz-transition: left 0.5s ease;
+  transition: left 0.5s ease;
+}
+
+main header > h2 {
+	color: #050505;
+	font-size: 20px;
+}
+
+main header > h2 span.todos-total {
+	position: absolute;
+	top: 3px;
+	color: #fff;
+	text-align: center;
+	margin: 0 0 0 18px;
+	padding: 1px 1.5px 2px 1.5px;
+	border-radius: 50%;
+	background-color: #148fd5;
+} 
+
+h3 {
+	color: #148fd5;
+	line-height: 22px;
+	margin: 35px 0 10px 0;
+	font-weight: lighter;
+	cursor: pointer;
+}
+
+label[for="new-item"] {
+	color: #148fd5;
+}
+
+input[id="new-item"] { display: none; }
+input:checked + img {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  z-index: 2;
+  width: 400px;
+  height: auto;
+  margin: 0 0 0 -200px;
+}
+input:checked + img:before {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  content: "";
+  background: rgba(0, 0, 0, .4);
+}
+
+table {
+  border-collapse: collapse; 
+}
+
+td {
+	padding: 12px 0;
+}
+
+td:nth-of-type(1) {
+	width: 40px;
+	padding-left: 15px;
+} 
+
+td:nth-of-type(2) {
+	width: 960px;
+}
+
+td:nth-of-type(3) {
+	width: 10px;
+  max-width: 30%;
+  padding-right: 15px;
+}
+
+tr {
+	border-top: 1px solid #e7e7e7;
+}
+
+tr.checked {
+	color: #b3b3b3;
+	text-decoration: line-through;
+}
+
+tr.checked:hover {
+	color: #b3b3b3;
+	cursor: default;
+}
+
+tr:hover {
+	color: #148fd5;
+	cursor: pointer;
+}
+
+
+
+/*
+==========================
+		 Hamburger Menu
+==========================
+*/
+
+input[id="menu-toggle"] {
+   display: none;
+}
+
+input:checked ~ main { 
+    left: 0;
+}
+
+input:checked ~ label {
+    left: 0;
+}
+
+label[for="menu-toggle"] {
+	z-index: 2;
+  position: absolute;
+  top: 25px;
+  left: 315px;
+  cursor: pointer;
+  margin: 0 0 0 35px;
+
+  -moz-transition: left 0.5s ease;
+  transition: left 0.5s ease;
+}
+
+
+/*
+==========================
+			Media Queries
+==========================
+*/
+
+@media screen and (max-width: 768px) {
+	input[id="menu-toggle"], 
+	label[for="menu-toggle"]{
+		visibility: visible;
+	}
 }

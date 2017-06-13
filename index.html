@@ -5,7 +5,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link href="assets/img/todo.png" rel="icon" />
-		<link href="styles.css" rel="stylesheet" />
+		<link href="newstyles.css" rel="stylesheet" />
 	</head>
 	<body>
 		<nav>
@@ -13,45 +13,45 @@
 				<img src="assets/img/list-icon.png" alt="List icon" />
 				<h2>All Todos <span class="todos-total">18</span></h2>
 				<a href="#">
-				<dl>
-					<dt>
+					<dl class="selected">
+						<dt>
 							<time datetime="2016-02">2/16</time>
-					</dt>
-					<dl>8</dl>
-				</dl>
+						</dt>
+						<dd class="selected">8</dd>
+					</dl>
 				</a>
-				<!-- <ul>
-					<li class="selected">
-						<a href="#">
-							<time datetime="2016-02">2/16</time> 
-						</a>
-						<span class="todos-total">8</span>
-					</li>
-					<li>
-						<a href="#">
+				<a href="#">
+					<dl>
+						<dt>
 							<time datetime="2016-03">3/16</time>
-						</a>
-							<span class="todos-total">2</span>
-					</li>
-					<li>
-						<a href="#">
-							<time datetime="2016-04">4/16</time> 
-						</a>
-						<span class="todos-total">1</span>
-					</li>
-					<li>
-						<a href="#">
+						</dt>
+						<dd>2</dd>
+					</dl>
+				</a>
+				<a href="#">
+					<dl>
+						<dt>
+							<time datetime="2016-04">4/16</time>
+						</dt>
+						<dd>1</dd>
+					</dl>
+				</a>
+				<a href="#">
+					<dl>
+						<dt>
 							<time datetime="2016-05">5/16</time>
-						</a> 
-						<span class="todos-total">1</span>
-					</li>
-					<li>
-						<a href="#">
+						</dt>
+						<dd>1</dd>
+					</dl>
+				</a>
+				<a href="#">
+					<dl>
+						<dt>
 							<time datetime="2016-06">6/16</time>
-						</a>
-							<span class="todos-total">6</span> 
-					</li>
-				</ul> -->
+						</dt>
+						<dd>6</dd>
+					</dl>
+				</a>
 			</section>
 
 			<section>
@@ -76,10 +76,5 @@
 				</ul>
 			</section>
 		</nav>
-
-		<main>
-			<h2><time datetime="2016-02">2/16</time> <span class="todos-total">8</span></h2>
-		</main>
-
 	</body>
 </html>

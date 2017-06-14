@@ -6,17 +6,15 @@
 ==========================
 */
 
-html, body {
-	height: 100%;
-}
-
 body {
 	line-height: 24px;
 	text-align: left;
+	color: #060606;
 	font: lighter 16px Helvetica, Arial, sans-serif;
 }
 
 h2 {
+	font-size: 18px;
 	font-weight: lighter;
 	letter-spacing: 1px;
 }
@@ -24,6 +22,11 @@ h2 {
 input[id="menu-toggle"], 
 label[for="menu-toggle"] {
 	visibility: hidden;
+	color: #464f77;
+}
+
+.container {
+	position: relative;
 }
 
 /*
@@ -38,26 +41,17 @@ nav {
   left: 0;
   bottom: 0;
   width: 315px;
-  /*float: left;
-  height: 100%;
-  position: relative;*/
 	background-color: #464f77;
 	box-sizing: border-box;
 }
-
-/*nav:after {
-	content: "";
-  display: table;
-  clear: both;
-}*/
 
 nav section:first-of-type {
 	padding-top: 65px;
 }
 
-nav section:last-of-type {
-	padding-top: 45px;
-}
+/*nav section:last-of-type {
+	padding: 45px 0 100%;
+}*/
 
 nav img {
 	position: absolute;
@@ -66,7 +60,7 @@ nav img {
 
 nav section > h2 {
 	color: #fff;
-	margin-top: 6px;
+	margin-top: 3px;
 	padding: 0 0 15px 140px;
 }
 
@@ -77,7 +71,7 @@ nav section ul li > a {
 	text-decoration: none;
 }
 
-dl, 
+nav dl, 
 nav ul li a  {
 	padding: 10px 0;
 	text-align: center;
@@ -88,30 +82,30 @@ nav dd {
 	display: inline-block;
 }
 
-dd, 
+nav dd, 
 h2 span.todos-total {
   width: 14px;
   height: 15px;
   font-size: 14px;
-  margin-top: -2px;
   background-color: #6c7094;
 }
 
-dd {
+nav dd {
 	position: absolute;
   right: 30px;
   padding: 2px;
   border-radius: 50%;
+  margin-top: -1px;
 }
 
 h2 span.todos-total {
 	color: #a5a7bd;
-	margin-left: 45px;
+	margin: -5px 0 0 36px;
 	border-radius: 9px;
 	padding: 1px 3px;
 }
 
-dd.selected, 
+nav dd.selected, 
 h2 span.todos-total {
 	background-color: #6c7094;
 }
@@ -120,14 +114,14 @@ nav li {
 	text-decoration: line-through;
 }
 
-dl:hover, 
+nav dl:hover, 
 nav li a:hover, 
-dl.selected {
+nav dl.selected {
 	color: #fff;
-  background-color: #373a60;
+  background-color: #383f5f;
 }
 
-dl:hover > dd, 
+nav dl:hover > dd, 
 dl.selected > dd {
 	background-color: #148fd5;
 }
@@ -140,14 +134,13 @@ dl.selected > dd {
 
 main {
 	background-color: #fff;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   bottom: 0; 
   left: 315px;
-  /*margin: 70px 0 0 35px;*/
-  padding: 0 50px;
-  margin: 70px auto;
+  padding: 70px 50px 100%;
+  min-width: 160px;
 
   -moz-transition: left 0.5s ease;
   transition: left 0.5s ease;
@@ -155,12 +148,12 @@ main {
 
 main header > h2 {
 	color: #050505;
-	font-size: 20px;
+	font-size: 21px;
 }
 
 main header > h2 span.todos-total {
 	position: absolute;
-	top: 3px;
+	top: 72px;
 	color: #fff;
 	text-align: center;
 	margin: 0 0 0 18px;
@@ -170,48 +163,201 @@ main header > h2 span.todos-total {
 } 
 
 h3 {
-	color: #148fd5;
+	color: #53ade0;;
 	line-height: 22px;
 	margin: 35px 0 10px 0;
 	font-weight: lighter;
 	cursor: pointer;
 }
 
-label[for="new-item"] {
-	color: #148fd5;
+/*
+==========================
+		   Form Styles
+==========================
+*/
+
+form {
+	width: 575px;
+	height: 400px;	
 }
 
-input[id="new-item"] { display: none; }
-input:checked + img {
-  position: absolute;
-  top: 100px;
-  left: 50%;
-  z-index: 2;
-  width: 400px;
-  height: auto;
-  margin: 0 0 0 -200px;
+fieldset {
+	display: block;
+	box-sizing: border-box;
 }
-input:checked + img:before {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-  content: "";
-  background: rgba(0, 0, 0, .4);
+
+form dt, 
+form dd {
+	display: inline-block;
+	vertical-align: top;
 }
+
+form dt {
+	color: #2c2c2c;
+	font-style: 16px;
+	padding-top: 30px;
+	width: 110px;
+	font-weight: 400;
+	letter-spacing: 1px;
+}
+
+form dd {
+	font-size: 16px;
+	padding-top: 25px;
+}
+
+label[for="description"] {
+	margin-top: -20px;
+}
+
+input[type="text"] {
+	width: 395px;
+	height: 36px;
+}
+
+select {
+	height: 36px;
+	width: 115px;
+	display: inline-block;
+	background-color: #fff;
+	background: url('assets/img/select-arrows.png') right no-repeat;
+	background-size: 20px;
+	cursor: pointer;	
+
+	-webkit-appearance: none;
+	-webkit-border-radius: 0px;
+}
+
+.datesep {
+	color: #2c2c2c;
+	margin: 0 6.5px;
+}
+
+textarea {
+	width: 395px;
+	height: 140px;
+	resize: none;
+	color: #757575;
+	letter-spacing: 1px;
+}
+
+input[type="text"],
+textarea, 
+form select {
+	font-style: 16px;
+	color: #2c2c2c;
+	padding: 10px;
+	border: 1px solid #b3b3b3;
+	box-sizing: border-box;
+	font: normal 14px Helvetica, Arial, sans-serif;
+}
+
+form select[id="month"], 
+form select[id="year"] {
+	color: #a1a1a1;
+}
+
+input[name="save"] {
+	margin: 24px 13px 0 115px;
+}
+
+input[name="save"], 
+input[name="complete"] {
+  color: #fff;
+  width: 182px;
+  height: 36px;
+  border-radius: 4px;
+  font-size: 16px;
+	background-color: #148fd5;
+  border: none;
+  cursor: pointer;
+}
+
+input[name="save"]:hover, 
+input[name="complete"]:hover {
+	color: #fff;
+	background: #2b9ad9;
+}
+
+/*
+==========================
+		  Modal Styles
+==========================
+*/
+
+.editToDo {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+.editToDo:target {
+    opacity:1;
+    pointer-events: auto;
+}
+.editToDo > div {
+    width: 575px;
+    position: relative;
+    margin: 10% auto;
+    padding: 5px 0 5px 25px;
+    background: #fff;
+}
+.close {
+		color: #fff;
+    line-height: 25px;
+    text-align: center;
+    background: #148fd5;
+    font: Helvetica, Arial, sans-serif;
+    position: absolute;
+    top: -10px;
+    right: -12px;
+    width: 24px;
+    text-decoration: none;
+
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+}
+.close:hover {
+	color: #fff;
+	background: #2b9ad9;
+}
+
+/*
+==========================
+		  Table Styles
+==========================
+*/
 
 table {
   border-collapse: collapse; 
+  max-width: 1200px;
 }
 
 td {
 	padding: 12px 0;
 }
 
+table a {
+	color: #060606;
+	text-decoration: none;
+}
+
+td a:hover {
+	color: #148fd5;;
+}
+
 td:nth-of-type(1) {
 	width: 40px;
+	min-width: 25px;
 	padding-left: 15px;
 } 
 
@@ -240,11 +386,9 @@ tr.checked:hover {
 }
 
 tr:hover {
-	color: #148fd5;
+	color: #339edb;
 	cursor: pointer;
 }
-
-
 
 /*
 ==========================
@@ -256,26 +400,25 @@ input[id="menu-toggle"] {
    display: none;
 }
 
-input:checked ~ main { 
+input[id="menu-toggle"]:checked ~ main { 
     left: 0;
 }
 
-input:checked ~ label {
+input[id="menu-toggle"]:checked ~ label {
     left: 0;
 }
 
 label[for="menu-toggle"] {
-	z-index: 2;
+	z-index: 4;
   position: absolute;
   top: 25px;
-  left: 315px;
+  left: 330px;
   cursor: pointer;
   margin: 0 0 0 35px;
 
   -moz-transition: left 0.5s ease;
   transition: left 0.5s ease;
 }
-
 
 /*
 ==========================
@@ -285,7 +428,54 @@ label[for="menu-toggle"] {
 
 @media screen and (max-width: 768px) {
 	input[id="menu-toggle"], 
-	label[for="menu-toggle"]{
+	label[for="menu-toggle"] {
 		visibility: visible;
+	}
+
+	nav, main {
+		overflow-y: scroll;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.editToDo > div {
+    width: 300px;
+    padding-left: 50px;
+		}
+
+	form {
+		width: 300px;
+		height: 600px;	
+	}
+
+	form dt, 
+	form dd {
+		display: block;
+	}
+
+	input[type="text"] {
+		width: 245px;
+	}
+
+	select {
+		width: 70px;
+	}
+
+	textarea {
+		width: 300px;
+	}
+
+	.datesep {
+		margin: 0 2px;
+	}
+
+	textarea {
+		width: 245px;
+	}
+
+	input[name="save"], 
+	input[name="complete"] {
+	  margin: 20px auto 0;
+	  width: 245px;
 	}
 }

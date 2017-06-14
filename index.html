@@ -81,7 +81,7 @@
 					</ul>
 				</section>
 			</nav>
-			
+
 			<main>
 				<header>
 					<h2>
@@ -91,19 +91,101 @@
 				</header>
 
 				<h3>
-					<label for="new-item">
-            <input type="checkbox" id="new-item" />
-            <img src="assets/img/plus-icon.png" alt="Add item" />
-            Add new to do
-          </label>
+					<img src="assets/img/plus-icon.png" alt="Add item" />
+					Add new to do
         </h3>
 
-				<table>
-					<tbody>
-						<tr>
-							<td><img src="assets/img/empty-box.png" alt="checkbox" /></td>
-							<td>Item 1</td>
-							<td><img src="assets/img/trash-bin.png" alt="Trash" /></td>
+        <table>
+        	<tbody>
+        		<tr>
+        			<td><img src="assets/img/empty-box.png" alt="checkbox" /></td>
+        			<td>
+        				<a href="#openModal">Item 1</a>
+								<div id="openModal" class="editToDo">
+								  <div><a href="#close" title="Close" class="close">x</a>
+								  	<form action="#action" method="post">
+								  		<fieldset>
+								  			<dl>
+							        		<dt>
+							        			<label for="title">Title</label>
+							        		</dt>
+							        		<dd>
+							        			<input type="text" id="title" name="title" value="Item 2" />
+							        		</dd>
+							        	</dl>
+							        	<dl>
+							        		<dt><label for="day">Due date</label></dt>
+							        		<dd>
+							        			<select name="day" id="day">
+											        <option value="1">1</option>
+											        <option value="2">2</option>
+											        <option value="3">3</option>
+											        <option value="4">4</option>
+											        <option value="5">5</option>
+											        <option value="6">6</option>
+											        <option value="7">7</option>
+											        <option value="8">8</option>
+											        <option value="9">9</option>
+											        <option value="10">10</option>
+											        <option value="11">11</option>
+											        <option value="12">12</option>
+											        <option value="13">13</option>
+											        <option value="14">14</option>
+											        <option value="15">15</option>
+											        <option value="16" selected="selected">16</option>
+											        <option value="17">17</option>
+											        <option value="18">18</option>
+											        <option value="19">19</option>
+											        <option value="20">20</option>
+											        <option value="21">21</option>
+											        <option value="22">22</option>
+											        <option value="23">23</option>
+											        <option value="24">24</option>
+											        <option value="25">25</option>
+											        <option value="26">26</option>
+											        <option value="27">27</option>
+											        <option value="28">28</option>
+											        <option value="29">29</option>
+											        <option value="30">30</option>
+											        <option value="31">31</option>
+											      </select> <span class="datesep">&#47;</span>
+											    	<label for="month" hidden="hidden">Month</label>
+							        			<select id="month">
+							        				<option value="month">Month</option>
+											        <option value="1">1</option>
+											        <option value="2">2</option>
+											        <option value="3">3</option>
+											        <option value="4">4</option>
+											        <option value="5">5</option>
+											        <option value="6">6</option>
+											        <option value="7">7</option>
+											        <option value="8">8</option>
+											        <option value="9">9</option>
+											        <option value="10">10</option>
+											        <option value="11">11</option>
+											        <option value="12">12</option>
+											      </select> <span class="datesep">&#47;</span>
+											    	<label for="year" hidden="hidden">Year</label>
+							        			<select id="year">
+							        				<option value="year">Year</option>
+											        <option value="2014">2014</option>
+											        <option value="2015">2015</option>
+											        <option value="2016">2016</option>
+											      </select>
+							        		</dd>
+							        	</dl>
+							        	<dl>
+													<dt><label for="description">Description</label></dt>
+													<dd><textarea rows="8" cols="30" name="description" id="description" placeholder="Description"></textarea></dd>
+												</dl>
+												<input type="submit" name="save" value="Save" /> 
+												<input type="submit" name="complete" value="Mark As Complete" />
+								  		</fieldset>
+								  	</form>      
+								  </div>
+								</div>
+        			</td>
+        			<td><img src="assets/img/trash-bin.png" alt="Trash" /></td>
 						</tr>
 						<tr>
 							<td><img src="assets/img/empty-box.png" alt="checkbox" /></td>
@@ -112,7 +194,7 @@
 						</tr>
 						<tr class="checked">
 							<td><img src="assets/img/checked-box.png" alt="checkbox" /></td>
-							<td><a>Item 3</a></td>
+							<td>Item 3</td>
 							<td><img src="assets/img/trash-bin.png" alt="Trash" /></td>
 						</tr>
 						<tr class="checked">
@@ -146,10 +228,9 @@
 							<td><img src="assets/img/trash-bin.png" alt="Trash" /></td>
 						</tr>
 					</tbody>
-				</table>
-
-
+        </table>
 			</main>
 		</div>
 	</body>
-</html>
+</html> 
+

@@ -46,12 +46,12 @@ nav {
 }
 
 nav section:first-of-type {
-	padding-top: 65px;
+	padding-top: 54px;
 }
 
-/*nav section:last-of-type {
-	padding: 45px 0 100%;
-}*/
+nav section:last-of-type {
+	padding-top: 27px;
+}
 
 nav img {
 	position: absolute;
@@ -135,7 +135,7 @@ dl.selected > dd {
 main {
 	background-color: #fff;
   position: fixed;
-  top: 0;
+  top: -10px;
   right: 0;
   bottom: 0; 
   left: 315px;
@@ -165,7 +165,7 @@ main header > h2 span.todos-total {
 h3 {
 	color: #53ade0;;
 	line-height: 22px;
-	margin: 35px 0 10px 0;
+	margin: 45px 0 10px 0;
 	font-weight: lighter;
 	cursor: pointer;
 }
@@ -178,7 +178,8 @@ h3 {
 
 form {
 	width: 575px;
-	height: 400px;	
+	height: 350px;
+	padding: 5px 5px 5px 20px;	
 }
 
 fieldset {
@@ -203,21 +204,16 @@ form dt {
 
 form dd {
 	font-size: 16px;
-	padding-top: 25px;
+	padding-top: 20px;
 }
 
 label[for="description"] {
 	margin-top: -20px;
 }
 
-input[type="text"] {
-	width: 395px;
-	height: 36px;
-}
-
 select {
 	height: 36px;
-	width: 115px;
+	width: 114.8px;
 	display: inline-block;
 	background-color: #fff;
 	background: url('assets/img/select-arrows.png') right no-repeat;
@@ -230,7 +226,7 @@ select {
 
 .datesep {
 	color: #2c2c2c;
-	margin: 0 6.5px;
+	margin: 0 6px;
 }
 
 textarea {
@@ -252,13 +248,19 @@ form select {
 	font: normal 14px Helvetica, Arial, sans-serif;
 }
 
+input[type="text"] {
+	width: 395px;
+	height: 36px;
+	padding-top: 12px;
+}
+
 form select[id="month"], 
 form select[id="year"] {
 	color: #a1a1a1;
 }
 
 input[name="save"] {
-	margin: 24px 13px 0 115px;
+	margin: 20px 13px 0 115px;
 }
 
 input[name="save"], 
@@ -304,10 +306,9 @@ input[name="complete"]:hover {
     pointer-events: auto;
 }
 .editToDo > div {
-    width: 575px;
+    width: 550px;
     position: relative;
     margin: 10% auto;
-    padding: 5px 0 5px 25px;
     background: #fff;
 }
 .close {
@@ -333,61 +334,51 @@ input[name="complete"]:hover {
 
 /*
 ==========================
-		  Table Styles
+	 Ordered List Styles
 ==========================
 */
 
-table {
-  border-collapse: collapse; 
-  max-width: 1200px;
+ol {
+	max-width: 1000px;
 }
 
-td {
-	padding: 12px 0;
+ol li {
+	padding: 11.5px 0;
+	border-top: 1px solid #e7e7e7;
 }
 
-table a {
+ol li > p {
+	display: inline-block;
+}
+
+ol li a {
 	color: #060606;
 	text-decoration: none;
 }
 
-td a:hover {
-	color: #148fd5;;
+ol li a:hover {
+	color: #339edb;
+	/*color: #148fd5;*/
 }
 
-td:nth-of-type(1) {
-	width: 40px;
-	min-width: 25px;
-	padding-left: 15px;
-} 
-
-td:nth-of-type(2) {
-	width: 960px;
-}
-
-td:nth-of-type(3) {
-	width: 10px;
-  max-width: 30%;
-  padding-right: 15px;
-}
-
-tr {
-	border-top: 1px solid #e7e7e7;
-}
-
-tr.checked {
+.checked a {
 	color: #b3b3b3;
 	text-decoration: line-through;
 }
 
-tr.checked:hover {
+.checked a:hover {
 	color: #b3b3b3;
 	cursor: default;
 }
 
-tr:hover {
-	color: #339edb;
-	cursor: pointer;
+.checkbox {
+	padding: 0 20px 0 15px;
+} 
+
+.delete {
+	padding: 0 15px 0 15px;
+	float: right;
+	clear: right;
 }
 
 /*
@@ -411,7 +402,7 @@ input[id="menu-toggle"]:checked ~ label {
 label[for="menu-toggle"] {
 	z-index: 4;
   position: absolute;
-  top: 25px;
+  top: 20px;
   left: 330px;
   cursor: pointer;
   margin: 0 0 0 35px;
@@ -440,8 +431,8 @@ label[for="menu-toggle"] {
 @media screen and (max-width: 600px) {
 	.editToDo > div {
     width: 300px;
-    padding-left: 50px;
-		}
+    padding-left: 20px;
+	}
 
 	form {
 		width: 300px;
